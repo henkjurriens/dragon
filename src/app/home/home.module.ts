@@ -9,6 +9,7 @@ import { CheckMenuItemComponent } from '../components/check-menu-item/check-menu
 import { GaugeComponent } from '../components/gauge/gauge.component';
 import { HeaderComponent } from '../components/header/header.component';
 import { DashboardItemComponent } from '../components/dashboard-item/dashboard-item.component';
+import { StatComponent } from '../components/stat/stat.component';
 
 
 @NgModule({
@@ -18,7 +19,7 @@ import { DashboardItemComponent } from '../components/dashboard-item/dashboard-i
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage, CheckMenuItemComponent, GaugeComponent, HeaderComponent, DashboardItemComponent], 
-  exports: [CheckMenuItemComponent, GaugeComponent, HeaderComponent, DashboardItemComponent]
+  declarations: [HomePage, CheckMenuItemComponent, GaugeComponent, HeaderComponent, DashboardItemComponent, StatComponent], 
+  exports: [CheckMenuItemComponent, GaugeComponent, HeaderComponent, DashboardItemComponent, StatComponent]
 })
 export class HomePageModule {}
