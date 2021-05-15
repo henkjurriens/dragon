@@ -1,0 +1,79 @@
+<ion-content [fullscreen]="true" style="background: #1A1C48">
+    <div class="h-full text-white" style="background: #1A1C48">
+        <app-header></app-header>
+
+        <div class="flex">
+            <div class="ml-20 mr-20 w-3/12">
+                <app-check-menu-item title="All systems check"></app-check-menu-item>
+                <app-check-menu-item title="Rendezvous burn slow"></app-check-menu-item>
+                <app-check-menu-item title="Prepare rendezvous burn"></app-check-menu-item>
+                <app-check-menu-item title="Terminal shield"></app-check-menu-item>
+                <app-check-menu-item title="Burn go/no-go"></app-check-menu-item>
+                <app-check-menu-item title="Power completion"></app-check-menu-item>
+                <app-check-menu-item title="Station deck check"></app-check-menu-item>
+            </div>
+            <div class="mt-10 ml-20 mr-20 mb-0 justify-center">
+
+                <div class="justify-center dragon h-full">
+
+                    <div class="flex justify-evenly">
+                        <app-gauge size="L"></app-gauge>
+                        <app-gauge size="L"></app-gauge>
+                        <app-gauge size="L"></app-gauge>
+                        <app-gauge size="L"></app-gauge>
+                    </div>
+
+                    <div class="flex ">
+                        <div class="flex-1">
+                            <div class="flex flex-row justify-start">
+                                <app-gauge size="M"></app-gauge>
+                                <app-gauge size="M"></app-gauge>
+
+                            </div>
+                        </div>
+
+                        <div class="flex-3">
+
+                        </div>
+
+                        <div class="flex-1">
+                            <div class="flex flex-row justify-end">
+                                <app-gauge size="M"></app-gauge>
+                                <app-gauge size="M"></app-gauge>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="ml-20 mr-20 w-3/12 ">
+
+            </div>
+        </div>
+
+
+        <div class="absolute inset-x-0 bottom-2 h-24">
+            <div class="mt-5 p-5 text-3xl flex justify-center" style="background-color: #1A1C48;">
+                <app-dashboard-item image="dragon-icon.png" title="Overview"></app-dashboard-item>
+                <app-dashboard-item image="life.png" title="Life"></app-dashboard-item>
+                <app-dashboard-item image="comms.png" title="Comms"></app-dashboard-item>
+                <app-dashboard-item image="prop.png" title="Prop"></app-dashboard-item>
+                <app-dashboard-item image="mech.png" title="Mech"></app-dashboard-item>
+                <app-dashboard-item image="battery.png" title="Power"></app-dashboard-item>
+                <app-dashboard-item image="avi.png" title="Avionics"></app-dashboard-item>
+                <app-dashboard-item image="gnc.png" title="GNC"></app-dashboard-item>
+                <app-dashboard-item image="thermal.png" title="Thermal"></app-dashboard-item>
+
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+</ion-content>
