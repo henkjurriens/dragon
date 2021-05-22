@@ -1,13 +1,16 @@
-<div class="m-5 w-36 h-36 rounded-full border-2" style="border-color: #9499C3;" *ngIf="size === 'L'">
-    <div>
+<div class="gaugeContainer">
+    <div [ngStyle]="getBackground()"></div>
 
+    <div id="pieSlice" class="hold">
+        <div class="pie" [ngStyle]="getPieBackground()"></div>
     </div>
 
-</div>
+    <div class="innerCircle">
+        <div class="content">
+            <div class="uppercase text-white">{{title}}</div>
+            <div class="uppercase text-white font-bold text-4xl">{{value}}</div>
+            <div class="uppercase text-white font-bold text-xl">{{unit}}</div>
 
-<div class=" m-5 w-24 h-24 rounded-full border-2 " style="border-color: #9499C3; " *ngIf="size==='M'">
-    <div>
-
+        </div>
     </div>
-
 </div>

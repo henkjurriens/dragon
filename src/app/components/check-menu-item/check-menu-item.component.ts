@@ -11,11 +11,20 @@ export class CheckMenuItemComponent implements OnInit {
   @Input()
   title: string;
 
+  @Input()
+  color: string;
+
   constructor() { 
     
   }
 
   ngOnInit() {
+
+  }
+
+  getColor() {
+    console.log('check', this.color);
+    return { 'color':  `${this.color}`}
 
   }
 

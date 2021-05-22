@@ -1,0 +1,57 @@
+.gaugeContainer {
+    height: 150px;
+    width: 150px;
+    position: relative;
+}
+
+// .gaugeBackground {
+//     position: absolute;
+//     width: 150px;
+//     height: 150px;
+//     border-radius: 75px;
+//     border: dotted #a04 2px;
+//     box-shadow: 0px 0px 8px #13162a;
+// }
+.pie {
+    transition: all 1s;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    clip: rect(0px, 75px, 150px, 0px);
+}
+
+.hold {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    clip: rect(0px, 150px, 150px, 75px);
+}
+
+#pieSlice {
+    transform: rotate(220deg);
+}
+
+#pieSlice .pie {
+    transform: rotate(60deg);
+}
+
+.innerCircle {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-color: #13162a;
+    border-radius: 60px;
+    top: 15px;
+    left: 15px;
+}
+
+.innerCircle .content {
+    position: absolute;
+    display: block;
+    width: 120px;
+    top: 15px;
+    left: 0;
+    text-align: center;
+}

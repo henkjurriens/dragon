@@ -1,75 +1,102 @@
 <ion-content [fullscreen]="true" style="background: #1A1C48">
-    <div class="h-full" class="background">
+    <div class="background h-full w-full">
         <app-header></app-header>
 
         <div class="flex">
-            <div class="ml-20 mr-20 w-3/12">
-                <app-check-menu-item title="All systems check"></app-check-menu-item>
-                <app-check-menu-item title="Rendezvous burn slow"></app-check-menu-item>
-                <app-check-menu-item title="Prepare rendezvous burn"></app-check-menu-item>
-                <app-check-menu-item title="Terminal shield"></app-check-menu-item>
-                <app-check-menu-item title="Burn go/no-go"></app-check-menu-item>
-                <app-check-menu-item title="Power completion"></app-check-menu-item>
-                <app-check-menu-item title="Station deck check"></app-check-menu-item>
+            <div class="flex-none ml-20 mr-5">
+                <app-check-menu-item title="All systems check" color="#9499C3"></app-check-menu-item>
+                <app-check-menu-item title="Rendezvous burn slow" color="#9499C3"></app-check-menu-item>
+                <app-check-menu-item title="Prepare rendezvous burn" color="#9499C3"></app-check-menu-item>
+                <app-check-menu-item title="Terminal shield" color="#40C110"></app-check-menu-item>
+                <app-check-menu-item title="Burn go/no-go" color="#9499C3"></app-check-menu-item>
+                <app-check-menu-item title="Power completion" color="#EA7B15"></app-check-menu-item>
+                <app-check-menu-item title="Station deck check" color="#9499C3"></app-check-menu-item>
             </div>
-            <div class="mt-10 ml-20 mr-20 mb-0 justify-center">
+
+            <div class="mt-10 ml-20 mr-20 mb-0 justify-center flex-grow">
 
                 <div class="justify-center dragon h-full">
 
-                    <div class="flex justify-evenly">
-                        <app-gauge size="L"></app-gauge>
-                        <app-gauge size="L"></app-gauge>
-                        <app-gauge size="L"></app-gauge>
-                        <app-gauge size="L"></app-gauge>
+                    <div class="flex">
+                        <app-gauge class="flex-1" size="L" title="PPO2" value="2.69" unit="psia" color="#FFD630"></app-gauge>
+                        <app-gauge class="flex-1" size="L" title="Cabin temp" value="2.41" unit="&deg;C" color="#E72D2D">
+                        </app-gauge>
+                        <app-gauge class="flex-1" size="L" title="Cabin pres" value="14.00" unit="psia" color="#FFD630">
+                        </app-gauge>
+                        <app-gauge class="flex-1" size="L" title="CO2" value="0.07" unit="mmHg" color="#298BFE">
+                        </app-gauge>
                     </div>
 
-                    <div class="flex ">
+                    <!-- <div class="flex mt-10 justify-items-stretch">
                         <div class="flex-1">
-                            <div class="flex flex-row justify-start">
-                                <app-gauge size="M"></app-gauge>
-                                <app-gauge size="M"></app-gauge>
-
-                            </div>
-                        </div>
-
-                        <div class="flex-3">
-
+                            <app-gauge size="L" title="Loop A" value="26.53" unit="&deg;C" color="#298BFE"></app-gauge>
                         </div>
 
                         <div class="flex-1">
-                            <div class="flex flex-row justify-end">
-                                <app-gauge size="M"></app-gauge>
-                                <app-gauge size="M"></app-gauge>
-                            </div>
+                            &nbsp;
                         </div>
+                        <div class="flex-1 justify-end">
+                            <app-gauge size="L" title="Net pwr" value="0.00" unit="W" color="#298BFE"></app-gauge>
+                        </div>
+                    </div> -->
+
+                    <div class="w-3/12">
+                        <div class="uppercase mt-20 font-light text-sm" style="color: #9499C3">Connections</div>
+                        <div class="border-1 mt-1" style="border-top: #9499C3 1px solid"></div>
+                        <div class="flex mt-2">
+                            <div class="w-1/2 text-sm" style="color: #9499C3">Manual flags</div>
+                            <div class="w-1/2 text-white text-right text-sm">Connected</div>
+                        </div>
+
+                        <div class="flex mt-1">
+                            <div class="w-1/2 text-sm" style="color: #9499C3">Changelog</div>
+                            <div class="w-1/2 text-right text-white text-sm">Connected</div>
+                        </div>
+
+                        <div class="flex mt-1">
+                            <div class="w-1/2 text-sm" style="color: #9499C3">Airlock</div>
+                            <div class="w-1/2 text-right text-white text-sm">Connected</div>
+                        </div>
+
+                        <div class="flex mt-1">
+                            <div class="w-1/2 text-sm" style="color: #9499C3">Wing</div>
+                            <div class="w-1/2 text-right text-white text-sm">Connected</div>
+                        </div>
+
+
                     </div>
 
                 </div>
             </div>
 
-            <div class="ml-20 mr-20 w-4/12 ">
-                <app-stat title="Inertial Velocity" value="7.68" unit="km/s"></app-stat>
+            <div class="flex-none">
+                <app-stat title="Inertial Velocity" value="7.68" unit="km/s" perc="30"></app-stat>
+                <app-stat title="Altitude" value="390.0" unit="km" perc="20"></app-stat>
+                <app-stat title="Apogee" value="404.4" unit="km" perc="40"></app-stat>
+                <app-stat title="Perigee" value="389.1" unit="km" perc="60"></app-stat>
+                <div class="mt-20"></div>
+                <app-stat title="Inclination" value="57" unit="&deg;" perc="50"></app-stat>
+                <app-stat title="Range to ISS" value="0.02" unit="km" perc="90"></app-stat>
             </div>
         </div>
 
-
-        <div class="absolute inset-x-0 bottom-2 h-24">
-            <div class="mt-5 p-5 text-3xl flex justify-center" style="background-color: #1A1C48;">
-                <app-dashboard-item image="dragon-icon.png" title="Overview"></app-dashboard-item>
-                <app-dashboard-item image="life.png" title="Life"></app-dashboard-item>
-                <app-dashboard-item image="comms.png" title="Comms"></app-dashboard-item>
-                <app-dashboard-item image="prop.png" title="Prop"></app-dashboard-item>
-                <app-dashboard-item image="mech.png" title="Mech"></app-dashboard-item>
-                <app-dashboard-item image="battery.png" title="Power"></app-dashboard-item>
-                <app-dashboard-item image="avi.png" title="Avionics"></app-dashboard-item>
-                <app-dashboard-item image="gnc.png" title="GNC"></app-dashboard-item>
-                <app-dashboard-item image="thermal.png" title="Thermal"></app-dashboard-item>
-
+        <div class="absolute inset-x-0 bottom-31 h-0">
+            <div class="p-5 text-3xl flex justify-center">
+                <div id="triangle-bottomright">&nbsp;</div>
+                <div class="flex p-2 pt-5" style="background-color: #1A1C48;">
+                    <app-dashboard-item class="ml-5" image="dragon-icon.png " title="Overview "></app-dashboard-item>
+                    <app-dashboard-item image="life.png " title="Life "></app-dashboard-item>
+                    <app-dashboard-item image="comms.png " title="Comms "></app-dashboard-item>
+                    <app-dashboard-item image="prop.png " title="Prop "></app-dashboard-item>
+                    <app-dashboard-item image="mech.png " title="Mech "></app-dashboard-item>
+                    <app-dashboard-item image="battery.png " title="Power "></app-dashboard-item>
+                    <app-dashboard-item image="avi.png " title="Avionics "></app-dashboard-item>
+                    <app-dashboard-item image="gnc.png " title="GNC "></app-dashboard-item>
+                    <app-dashboard-item image="thermal.png " title="Thermal "></app-dashboard-item>
+                </div>
+                <div id="triangle-bottomleft">&nbsp;</div>
             </div>
         </div>
-
-
-
 
     </div>
 

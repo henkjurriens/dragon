@@ -1,6 +1,6 @@
-<div class="flex mb-12">
-    <div class="mr-5 " style="color: #9499C3 ">
-        <ion-icon name="checkmark-circle" style="font-size: 24px;"></ion-icon>
+<div class="flex mb-12 w-full">
+    <div class="mr-5 " [ngStyle]="getColor()">
+        <ion-icon name="checkmark-circle" style="font-size: 24px;" [ngStyle]="getColor()"></ion-icon>
     </div>
     <div style="color: #9499C3 ">
         <div class="font-extrabold uppercase " style="font-size: 14px; ">{{title}}</div>

@@ -5,5 +5,19 @@
 }
 
 .background {
-    background: url("/assets/bg.svg") no-repeat;
+    background: #13162a url("/assets/bg.svg"); // #13162a
+}
+
+#triangle-bottomleft {
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid #1A1C48;
+    border-right: 100px solid transparent;
+}
+
+#triangle-bottomright {
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid #1A1C48;
+    border-left: 100px solid transparent;
 }
